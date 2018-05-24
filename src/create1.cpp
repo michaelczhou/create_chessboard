@@ -7,9 +7,9 @@ int main()
 {
     //---生成标定图
     IplImage *img;
-    int dx=10;      //棋盘格大小，像素为单位
-    int dy1=7;       //棋盘格数目
-    int dy2=7;
+    int dx=100;      //棋盘格大小，像素为单位
+    int dy1=7;       //棋盘格数目,横
+    int dy2=8;
     img = cvCreateImage(cvSize(dx*dy1, dx*dy2), IPL_DEPTH_8U, 1);
     cvZero(img);
     int flag=0;
@@ -25,7 +25,7 @@ int main()
             }
         }
         //---END生成标定图
-        cvSaveImage("/home/zc/project/Calibration/create_chessboard-master/2.jpg",img);
+        cvSaveImage("/home/zc/project/Calibration/2.jpg",img);
         cvNamedWindow("棋盘格", 1);
         cvShowImage("棋盘格",img);
         cvWaitKey(0);

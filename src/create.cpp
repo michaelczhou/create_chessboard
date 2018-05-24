@@ -31,7 +31,7 @@ int main(int argc, char*argv[])
     }
 
     cv::imshow("src",src);
-    cv::imwrite("ChessBoard.png", src);
+    cv::imwrite("/home/zc/project/Calibration/ChessBoard.png", src);
     cv::waitKey(0);
 
     return 0;
